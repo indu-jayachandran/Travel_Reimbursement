@@ -1,0 +1,108 @@
+@model IEnumerable<BillPropert>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<header>
+<nav  class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"style="background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);" >
+            <div class="container" style="background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <img src="~/Images/TravelLogo.png"style="width:70px;height:40px;" asp-controller="Home" asp-action="Index"/>Travel Reimbrusement
+                    </a>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav">
+                             <li class="nav-item login-item">
+                                <a class="nav-link nav-link-bold nav-link-hover" asp-controller="Home" asp-action="Index">Logout</a>
+                            </li>
+                    </ul>
+            </div> 
+            </div>
+        </nav>
+    </header>
+<h1 style="text-align:center;">Bill Details of Employees</h1><br>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<table class="table">
+    <thead>
+        <tr style="background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);">
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Visited_Palce)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Travel_By)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.vehicle_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Purpose_of_Visit)
+            <th>
+                @Html.DisplayNameFor(model => model.Bill_File)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bill_Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date_on_Bill)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Expense)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr style="background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);">
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Visited_Palce)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Travel_By)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.vehicle_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Purpose_of_Visit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bill_File)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bill_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date_on_Bill)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Expense)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Pay</a> |
+                <a asp-action="AdminDetails" asp-route-id="@item.ID">Details</a> |
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

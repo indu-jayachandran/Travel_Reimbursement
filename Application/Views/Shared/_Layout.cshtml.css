@@ -1,0 +1,51 @@
+﻿a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+  background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
+}
+
+a {
+  color: #dc7171;
+}
+
+.btn-danger{
+  color: #fff;
+  background-color: #040e18;
+  border-color: #bb5269;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #cc6f6f;
+  background-color: #b82a44;
+  border-color: #df5273;
+}
+
+.border-top {
+  border-top: 1px solid #c75b5b;
+}
+.border-bottom {
+  border-bottom: 1px solid #d27d7d;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+body{
+  width: 100%;
+}
+
+
